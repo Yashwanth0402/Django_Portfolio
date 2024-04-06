@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Papers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black; /* Updated background color to black */
+            color: white; /* Set text color to white */
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #222; /* Darker background color */
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            border-bottom: 1px solid #333; /* Darker border color */
+            padding: 20px 0;
+        }
+        strong {
+            font-weight: bold;
+        }
+        a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Research Papers</h1>
+        <ul>
+            {% for paper in papers %}
+            <li>
+                <strong>Title:</strong> {{ paper.title }}<br>
+                <strong>Author:</strong> {{ paper.author }}<br>
+                <a href="{% url 'download_paper' paper.id %}">Download PDF</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
