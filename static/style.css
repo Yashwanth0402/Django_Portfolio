@@ -17,10 +17,6 @@ html {
   scroll-behavior: smooth;
 }
 
-p {
-  color: black; /* Changed text color to white */
-}
-
 /* TRANSITION */
 
 a,
@@ -68,6 +64,9 @@ a:hover {
   cursor: default;
 }
 
+.p {
+ color: black;
+}
 /* HAMBURGER MENU */
 
 #hamburger-nav {
@@ -170,6 +169,11 @@ section {
   gap: 5rem;
   height: 80vh;
 }
+
+.text-gray p {
+    color: gray;
+}
+
 
 @keyframes neon-glow {
   0% {
@@ -308,6 +312,10 @@ section {
 
 #about {
   position: relative;
+}
+
+.text-container p {
+   color: gray;
 }
 
 .about-containers {
